@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Padding Dinámico</title>
+    <style>
+        *,
+        *::after,
+        *::before {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: sans-serif;
+        }
+
+        .header {
+            position: fixed;
+            top: O;
+            left: 0;
+            width: 100%;
+            padding: 2.5rem 0;
+            border-bottom: 2px solid grey;
+            background-color: steelblue;
+            color: white;
+            text-align: center;
+
+        }
+
+        .contenedor {
+            max-width: 800px;
+            margin: 0 auto;
+            width: calc(100vw - 3rem);
+        }
+
+        p {
+            margin-bottom: 1rem;
+            line-height: 1.5;
+            font-size: 1.5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header" id="miHeader">
+        <h1>Hola Mundo</h1>
+    </header>
+    <div class="contenedor padding-dinamico">
+        <p>Proident dolor non ipsum ipsum pariatur consequat aliquip cillum dolor dolore do. Voluptate consequat ut esse
+            excepteur. Non labore quis est id anim officia exercitation eu laborum quis consequat laborum. Velit officia
+            non occaecat amet deserunt commodo veniam minim quis irure do. In quis in id officia proident sit sit sint
+            adipisicing laboris. Nulla proident aliquip nulla veniam consectetur anim ipsum. Sunt ad nisi tempor non
+            aliqua adipisicing duis enim esse deserunt anim cupidatat mollit sit.</p>
+        <p>Irure in dolore pariatur dolor fugiat in minim commodo enim anim non labore sunt est. Ad ullamco cupidatat
+            commodo reprehenderit amet cupidatat do anim tempor. Fugiat laborum minim voluptate consectetur magna
+            laborum enim minim sit ullamco voluptate minim dolor. Do dolor excepteur laboris consequat anim minim
+            incididunt velit minim elit esse. Ad irure deserunt et dolor. Deserunt labore magna laborum culpa.</p>
+        <p>Laborum sunt mollit sint deserunt aute sunt deserunt enim excepteur qui ullamco deserunt. Et esse
+            reprehenderit id nisi dolor eu pariatur laboris enim fugiat tempor quis. Et anim veniam proident velit anim.
+            Minim id sunt exercitation nulla adipisicing nulla aliquip do anim anim anim qui mollit. Sit esse incididunt
+            eiusmod est anim non. Nisi proident proident est aute consectetur ipsum culpa proident minim amet voluptate.
+        </p>
+        <p>Nulla irure ex officia ullamco culpa culpa veniam ea. Excepteur qui anim cillum officia sit in eu consequat
+            labore et velit est. Veniam labore cupidatat cillum commodo sit pariatur aliqua cillum nostrud ipsum minim
+            aute. Id magna velit incididunt sunt. Do veniam consequat voluptate elit eu enim. Reprehenderit excepteur do
+            sint nulla dolore. Mollit cupidatat eu commodo adipisicing fugiat eu reprehenderit enim quis ex ut Lorem
+            enim.</p>
+        <p>Commodo labore ad ut quis eu magna do sint nostrud consectetur. Irure dolore pariatur qui excepteur fugiat id
+            magna duis laborum. Deserunt exercitation culpa incididunt commodo deserunt in nisi proident deserunt. Aute
+            consectetur minim amet ullamco nostrud id est pariatur duis voluptate veniam. Do excepteur non nisi ex eu
+            sint quis cillum cillum reprehenderit incididunt do do.</p>
+    </div>
+    <script>
+        let headerHeight = document.querySelector("#miHeader");
+        let paddingDinamico = document.querySelector(".padding-dinamico");
+        // console.log(headerHeight.offsetHeight);
+        padding = headerHeight.offsetHeight + 64;
+        paddingDinamico.style.paddingTop = `${padding}px`;
+    </script>
+</body>
+
+</html>
